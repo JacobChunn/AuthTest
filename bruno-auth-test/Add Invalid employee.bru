@@ -1,0 +1,36 @@
+meta {
+  name: Add Invalid employee
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseURL}}/api/employee
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "number": 7,
+      "username": "brunoThisNameisWayyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyTooLong",
+      "password": "bruno",
+      "firstname": "bruno",
+      "lastname": "bruno",
+      "cellphone": "bruno",
+      "homephone": "bruno",
+      "email": "bruno",
+      "managerid": 7,
+      "accesslevel": 7,
+      "timesheetrequired": false,
+      "overtimeeligible": false,
+      "tabnavigateot": false,
+      "emailexpensecopy": false,
+      "activeemployee": false,
+      "ientertimedata": false,
+      "numtimesheetsummaries": 7,
+      "numexpensesummaries": 7,
+      "numdefaulttimerows": 7,
+      "contractor": false
+  }
+}

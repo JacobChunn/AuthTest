@@ -1,0 +1,18 @@
+meta {
+  name: Invalid Username
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{baseURL}}/api/login
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "username": "madeUp!",
+      "password": "should be invalid"
+  }
+}

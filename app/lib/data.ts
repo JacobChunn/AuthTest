@@ -34,7 +34,7 @@ export async function fetchEmployeeByCredentials(username: string, password: str
 			activeEmployee, iEnterTimeData, numTimeSheetSummaries,
 			numExpenseSummaries, numDefaultTimeRows, contractor
 		FROM employees
-		WHERE employees.id = ${id};
+		WHERE employees.username = ${username};
 	  `;
   
 	  const employee = data.rows;

@@ -24,7 +24,7 @@ const handler = NextAuth({
               // You can also use the `req` object to obtain additional parameters
               // (i.e., the request IP address)
               
-              const res = await fetch("/your/endpoint", {
+              const res = await fetch("http://localhost:3000/api/login", {
                 method: 'POST',
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
@@ -34,11 +34,8 @@ const handler = NextAuth({
               })
 
               const user = await res.json()
-
+              console.log(user)
               // If no error and we have user data, return it
-            //   if (res.ok && user) {
-            //     return user
-            //   }
                 if ( res.ok && user ) {
                     return user;
                 }

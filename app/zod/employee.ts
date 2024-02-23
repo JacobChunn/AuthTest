@@ -23,3 +23,6 @@ export const EmployeeSchema = z.object({
 	numdefaulttimerows: z.coerce.number(),
 	contractor: z.coerce.boolean(),
 });
+
+export const EmployeeNoID = EmployeeSchema.omit({ id: true });
+export const EmployeeUserPass = EmployeeSchema.pick({ username: true, password: true});

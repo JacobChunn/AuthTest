@@ -1,0 +1,36 @@
+meta {
+  name: Add employee
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseURL}}/api/employee
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "number": 7,
+      "username": "bruno",
+      "password": "bruno",
+      "firstname": "bruno",
+      "lastname": "bruno",
+      "cellphone": "bruno",
+      "homephone": "bruno",
+      "email": "bruno",
+      "managerid": 7,
+      "accesslevel": 7,
+      "timesheetrequired": false,
+      "overtimeeligible": false,
+      "tabnavigateot": false,
+      "emailexpensecopy": false,
+      "activeemployee": false,
+      "ientertimedata": false,
+      "numtimesheetsummaries": 7,
+      "numexpensesummaries": 7,
+      "numdefaulttimerows": 7,
+      "contractor": false
+  }
+}
