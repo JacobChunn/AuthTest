@@ -1,5 +1,7 @@
 import type { Config } from "tailwindcss";
 
+const colors = require('tailwindcss/colors');
+
 const config: Config = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -13,8 +15,24 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+	  colors: {
+        green: colors.green,
+        lime: colors.lime,
+        red: colors.red,
+        rose: colors.rose,
+        yellow: colors.yellow,
+        softYellow: '#fefaa6',
+        purple: colors.purple,
+        indigo: colors.indigo,
+        orange: colors.orange,
+        amber: colors.amber,
+        blue: colors.blue,
+        black: colors.black,
+        white: colors.white,
+		
+      },
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/forms')],
 };
 export default config;

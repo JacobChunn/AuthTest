@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className="w-full h-full">
         <Providers>
           <AppBar/>
           {children}
